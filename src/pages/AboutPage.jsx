@@ -11,7 +11,7 @@ const AboutPage = () => {
           <Link to="/">Back To Home</Link>
         </p>
       </div>
-      <p>Developed By Ismail Abdifadil Isack</p>
+      <p className='developer'>Developed By Ismail Abdifadil Isack</p>
     </Card>
   );
 };
