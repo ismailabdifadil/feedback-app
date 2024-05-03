@@ -3,10 +3,9 @@ import FeedbackItem from './FeedbackItem';
 import { useContext } from 'react';
 import FeedbackContext from '../context/FeedbackContext';
 const FeedbackList = () => {
+  const { feedback } = useContext(FeedbackContext);
 
-  const {feedback} = useContext(FeedbackContext);
-
-  if (!feedback || feedback.length == 0) {
+  if (!feedback || feedback.length === 0) {
     return <p>No Feedback Yet</p>;
   }
 
@@ -21,7 +20,7 @@ const FeedbackList = () => {
           exit={{ opacity: 0 }}
           transition={{ duration: 0.5 }}
         >
-          <FeedbackItem key={item.id} item={item}/>
+          <FeedbackItem key={item.id} item={item} />
         </motion.div>
       ))}
     </div>
