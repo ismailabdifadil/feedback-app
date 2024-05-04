@@ -1,6 +1,6 @@
 import { v4 as uuidv4 } from 'uuid';
 import { createContext, useEffect, useState } from 'react';
-import FeedbackData from '../data/FeedbackData';
+// import FeedbackData from '../data/FeedbackData';
 
 const FeedbackContext = createContext();
 
@@ -58,6 +58,7 @@ export const FeedbackProvider = ({ children }) => {
       value={{
         feedback,
         feedbackEdit,
+        isLoading,
         deleteFeedback,
         addFeedback,
         editFeedback,
