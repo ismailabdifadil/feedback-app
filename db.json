@@ -1,13 +1,28 @@
 {
   "feedback": [
     {
-      "text": "Give me a comment through this app",
-      "rating": 10,
+      "text": "Give me a comment",
+      "rating": 7,
       "id": "4789"
     },
     {
       "id": "34b4",
       "text": "I really appriciate your feedback about this React App",
+      "rating": 9
+    },
+    {
+      "text": "This feedback is from item one",
+      "rating": 9,
+      "id": "8428"
+    },
+    {
+      "id": "b355",
+      "text": "Fantastic app",
+      "rating": 10
+    },
+    {
+      "id": "7f6e",
+      "text": "I made it nicely",
       "rating": 9
     }
   ]

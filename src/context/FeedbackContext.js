@@ -16,13 +16,33 @@ export const FeedbackProvider = ({ children }) => {
 
   // Fetch feedback
 
-  const endPoint = 'http://localhost:5000/feedback';
+  // const endPoint = 'http://localhost:5000/feedback';
+  // const fetchFeedback = async () => {
+  //   const response = await fetch(endPoint);
+  //   const data = await response.json();
+  //   setFeedback(data);
+  //   setIsLoading(false);
+  // };
+
+  const endPoint = 'https://feedback-api-1.onrender.com/feedback';
   const fetchFeedback = async () => {
     const response = await fetch(endPoint);
     const data = await response.json();
     setFeedback(data);
     setIsLoading(false);
   };
+
+  // const addFeedback = async (newFeedback) => {
+  //   const response = await fetch(endPoint, {
+  //     method: 'POST',
+  //     headers: {
+  //       'Content-Type': 'application/json',
+  //     },
+  //     body: JSON.stringify(newFeedback),
+  //   });
+  //   const data = await response.json();
+  //   setFeedback([data, ...feedback]);
+  // };
 
   const addFeedback = async (newFeedback) => {
     const response = await fetch(endPoint, {
