@@ -16,14 +16,6 @@ export const FeedbackProvider = ({ children }) => {
 
   // Fetch feedback
 
-  // const endPoint = 'http://localhost:5000/feedback';
-  // const fetchFeedback = async () => {
-  //   const response = await fetch(endPoint);
-  //   const data = await response.json();
-  //   setFeedback(data);
-  //   setIsLoading(false);
-  // };
-
   const endPoint = 'https://feedback-api-1.onrender.com/feedback';
   const fetchFeedback = async () => {
     const response = await fetch(endPoint);
@@ -32,17 +24,7 @@ export const FeedbackProvider = ({ children }) => {
     setIsLoading(false);
   };
 
-  // const addFeedback = async (newFeedback) => {
-  //   const response = await fetch(endPoint, {
-  //     method: 'POST',
-  //     headers: {
-  //       'Content-Type': 'application/json',
-  //     },
-  //     body: JSON.stringify(newFeedback),
-  //   });
-  //   const data = await response.json();
-  //   setFeedback([data, ...feedback]);
-  // };
+  // Adding feedback
 
   const addFeedback = async (newFeedback) => {
     const response = await fetch(endPoint, {
@@ -56,11 +38,7 @@ export const FeedbackProvider = ({ children }) => {
     setFeedback([data, ...feedback]);
   };
 
-  // Adding the data withous json server
-  // const addFeedback = (newFeedback) => {
-  //   newFeedback.id = uuidv4();
-  //   setFeedback([newFeedback, ...feedback]);
-  // };
+  // Delete feedback
 
   const deleteFeedback = async (id) => {
     if (window.confirm('Are you sure you want to delete this feedback? ')) {
@@ -69,12 +47,16 @@ export const FeedbackProvider = ({ children }) => {
     }
   };
 
+  // Edit mode
+
   const editFeedback = (item) => {
     setFeedbackEdit({
       item,
       edit: true,
     });
   };
+
+  // Update feedback
 
   const updateFeedback = async (id, updatedItem) => {
     const response = await fetch(`${endPoint}/${id}`, {

@@ -6,12 +6,14 @@ import FeedbackForm from './components/FeedbackForm';
 import AboutPage from './pages/AboutPage';
 import AboutIcon from './components/AboutIcon';
 import { FeedbackProvider } from './context/FeedbackContext';
+import Spinner from './components/shared/Spinner';
 
 const App = () => {
   return (
     <FeedbackProvider>
       <Router>
         <Header />
+        {/* <Spinner/> */}
         <div className="container">
           <Routes>
             <Route
